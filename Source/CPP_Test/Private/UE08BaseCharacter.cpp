@@ -1,0 +1,32 @@
+
+#include "UE08BaseCharacter.h"
+#include "GameFramework/CharacterMovementComponent.h"
+//
+AUE08BaseCharacter::AUE08BaseCharacter()
+{
+
+	PrimaryActorTick.bCanEverTick = false;
+
+}
+
+// 
+void AUE08BaseCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+//
+void AUE08BaseCharacter::OnDeath()
+{
+	GetCharacterMovement()->DisableMovement();
+}
+
+
+
+// 
+void AUE08BaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+}
+
