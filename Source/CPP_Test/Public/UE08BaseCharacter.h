@@ -9,7 +9,7 @@ class CPP_TEST_API AUE08BaseCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-	/** Methods **/
+	/** METHODS **/
 
 
 public:
