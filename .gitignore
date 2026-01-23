@@ -73,3 +73,9 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+<<<<<<< HEAD
+Content/StarterContent/*
+=======
+Content/StarterContent/*
+>>>>>>> 0ee73755c7ef7d7a4eba412ed1b20720bdedb751
