@@ -10,7 +10,7 @@
 
 #include "PlayerCharacter.generated.h"
 
-
+class AUE08TriggerPlatform;
 
 
 DECLARE_LOG_CATEGORY_EXTERN(LogPlayerCharacter, Log, All);
@@ -96,5 +96,16 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputMappingContext* DefaultMappingContext;
+
+	// Interact Input Action (E)
+	UPROPERTY(EditAnywhere, Category = "UE08|Input")
+	UInputAction* InteractAction;
+
+	// параметры интеракта
+	UPROPERTY(EditAnywhere, Category = "UE08|Interact")
+	float InteractDistance = 500.0f;
+
+	// метод нажатия E
+	void Interact(const FInputActionValue& Value);
 
 };
