@@ -13,3 +13,17 @@ void AUE08AICharacter::BeginPlay()
 {
 	Super::BeginPlay();
 }
+
+AActor* AUE08AICharacter::GetNextPatrolPoint()
+{
+	if (PatrolPoints.Num() == 0)
+	{
+		return nullptr;
+	}
+
+	AActor* PatrolPoint = PatrolPoints[CurrentPatrolIndex];
+
+	CurrentPatrolIndex = (CurrentPatrolIndex + 1) % PatrolPoints.Num();
+
+	return PatrolPoint;
+}

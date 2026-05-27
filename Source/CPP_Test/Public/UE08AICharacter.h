@@ -17,8 +17,16 @@ public:
 
 	AUE08AICharacter();
 
-	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "AI")
-	UBehaviorTree* BehaviorTreeAsset;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	TObjectPtr<UBehaviorTree> BehaviorTreeAsset;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, Category = "AI")
+	TArray<TObjectPtr<AActor>> PatrolPoints;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+	int32 CurrentPatrolIndex = 0;
+
+	AActor* GetNextPatrolPoint();
 
 protected:
 
